@@ -1,0 +1,9 @@
+---
+applications:
+  - name: pal-calc
+    path: build/libs/pal-calc.jar
+    routes:
+      - route: pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io
+    env:
+      WELCOME_MESSAGE: Hello from Cloud Foundry
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
