@@ -1,4 +1,4 @@
-package test.pivotal.pal.trackerapi;
+package test.pivotal.pal.calcapi;
 
 import io.pivotal.pal.calc.PalCalcApplication;
 import org.junit.Test;

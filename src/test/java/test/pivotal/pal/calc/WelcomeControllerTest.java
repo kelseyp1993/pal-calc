@@ -1,4 +1,4 @@
-package test.pivotal.pal.tracker;
+package test.pivotal.pal.calc;
 
 import io.pivotal.pal.calc.WelcomeController;
 import org.junit.Test;
