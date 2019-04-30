@@ -5,28 +5,33 @@ import java.util.List;
 
 public class InMemoryCalcEntryRepository implements CalcEntryRepository{
 
+
     public List<CalcEntry> calcHistory = new ArrayList<>();
+
+    public InMemoryCalcEntryRepository(){
+
+    }
 
     @Override
     public CalcEntry create(CalcEntry calcEntryToCreate) {
         double calcResult = 0;
         switch(calcEntryToCreate.getOperator()){
-            case 0:
+            case 0: //Add
                 calcResult =
                         calcEntryToCreate.getOperandOne() +
                                 calcEntryToCreate.getOperandTwo();
                 break;
-            case 1:
+            case 1: //Sub
                 calcResult =
                         calcEntryToCreate.getOperandOne() -
                                 calcEntryToCreate.getOperandTwo();
                 break;
-            case 2:
+            case 2: //Mult
                 calcResult =
                         calcEntryToCreate.getOperandOne() *
                                 calcEntryToCreate.getOperandTwo();
                 break;
-            case 3:
+            case 3: //Div
                 calcResult =
                         calcEntryToCreate.getOperandOne() /
                                 calcEntryToCreate.getOperandTwo();

@@ -1,0 +1,23 @@
+curl -i -XPOST -H"Content-Type: application/json" localhost:8080/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 0}"
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8080/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 1}"
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8080/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 2}"
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8080/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 3}"
+
+curl -i -XPOST -H"Content-Type: application/json" localhost:8080/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": Sailboat, \"operator\": 0}"
+
+curl -i localhost:8080/calc-entries
+
+curl -i -XPOST -H"Content-Type: application/json" http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 0}"
+
+curl -i -XPOST -H"Content-Type: application/json" http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 1}"
+
+curl -i -XPOST -H"Content-Type: application/json" http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 2}"
+
+curl -i -XPOST -H"Content-Type: application/json" http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": 5, \"operator\": 3}"
+
+curl -i -XPOST -H"Content-Type: application/json" http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries -d"{\"operandOne\": 10, \"operandTwo\": Sailboat, \"operator\": 0}"
+
+curl -i http://pal-calc-kelsey-pritsker.apps.evans.pal.pivotal.io/calc-entries

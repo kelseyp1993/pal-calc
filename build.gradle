@@ -17,7 +17,11 @@ plugins {
     id "java"
 }
 
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenCentral()
@@ -29,6 +33,12 @@ dependencies {
     
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper:9.0.19")
+    compile("org.webjars:bootstrap:4.3.1")
+    compile("org.webjars:bootstrap-datepicker:1.8.0")
+    compile("org.webjars.bower:jquery:3.4.0")
 }
 
 bootRun.environment([

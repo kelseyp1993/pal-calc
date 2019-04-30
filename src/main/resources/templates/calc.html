@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/calc}" th:object="${calc}" method="post">
+    <p>Operand 1: <input type="text" th:field="*{operandOne}" placeholder="Operand 1"/></p>
+    <p>Operand 2: <input type="text" th:field="*{operandTwo}" /></p>
+    <!--<th:form type="select" th:field="{operator}" />-->
+        <!--<optoin value="0" label="Add(+)"></optoin>-->
+    <!--<div class="input-group">-->
+        <!--<select class="custom-select" id="inputGroupSelect04" th:field="*{operator}">-->
+            <!--<option value="0">Add</option>-->
+            <!--<option value="1">Subtract</option>-->
+            <!--<option value="2">Multiply</option>-->
+            <!--<option value="3">Divide</option>-->
+        <!--</select>-->
+        <!--<div class="input-group-append">-->
+            <!--<button class="btn btn-outline-secondary" type="button">Calculate</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <select th:field="*{operator}" >
+        <option th:value="0" th:text="Addition" >+</option>
+        <option th:value="1" th:text="Subtraction">-</option>
+        <option th:value="2" th:text="Multiplication">*</option>
+        <option th:value="3" th:text="Division">/</option>
+    </select>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

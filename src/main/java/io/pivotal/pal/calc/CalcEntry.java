@@ -55,4 +55,30 @@ public class CalcEntry {
     public int hashCode() {
         return Objects.hash(operandOne, operandTwo, operator, result);
     }
+
+    @Override
+    public String toString() {
+        return "CalcEntry{" +
+                "operandOne=" + operandOne +
+                ", operandTwo=" + operandTwo +
+                ", operator=" + operator +
+                ", result=" + result +
+                '}';
+    }
+
+    public void setOperandOne(double operandOne) {
+        this.operandOne = operandOne;
+    }
+
+    public void setOperandTwo(double operandTwo) {
+        this.operandTwo = operandTwo;
+    }
+
+    public void setOperator(int operator) {
+        this.operator = operator;
+    }
+
+    public void setResult(double result) {
+        this.result = result;
+    }
 }
