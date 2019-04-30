@@ -38,13 +38,14 @@ public class InMemoryCalcEntryRepository implements CalcEntryRepository{
                 break;
         }
 
-        CalcEntry newCalcEntry = new CalcEntry(calcEntryToCreate.getOperandOne(),
-                            calcEntryToCreate.getOperandTwo(),
-                            calcEntryToCreate.getOperator(),
-                            calcResult);
+//        CalcEntry newCalcEntry = new CalcEntry(calcEntryToCreate.getOperandOne(),
+//                            calcEntryToCreate.getOperandTwo(),
+//                            calcEntryToCreate.getOperator(),
+//                            calcResult);
 
-        calcHistory.add(0,newCalcEntry);
-        return newCalcEntry;
+        calcEntryToCreate.setResult(calcResult);
+        calcHistory.add(0,calcEntryToCreate);
+        return calcEntryToCreate;
     }
 
     @Override

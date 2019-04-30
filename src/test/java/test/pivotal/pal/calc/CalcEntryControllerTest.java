@@ -44,7 +44,7 @@ public class CalcEntryControllerTest {
 
         ResponseEntity response = controller.create(calcEntryToCreate);
 
-
+        System.out.println();
         verify(calcEntryRepository).create(calcEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(response.getBody()).isEqualTo(expectedResult);

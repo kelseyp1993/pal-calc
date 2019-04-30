@@ -12,10 +12,10 @@ import java.util.List;
 @Controller
 public class CalcEntryController {
 
-    InMemoryCalcEntryRepository calcEntryRepository = new InMemoryCalcEntryRepository();
+    private CalcEntryRepository calcEntryRepository;
 
     public CalcEntryController(CalcEntryRepository calcEntryRepository) {
-        //this.calcEntryRepository = calcEntryRepository;
+        this.calcEntryRepository = calcEntryRepository;
     }
 
     @GetMapping("/")
