@@ -1,15 +1,30 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Result</h1>
-<p th:text="'First Number: ' + ${calcEntry.operandOne}" />
-<p th:text="'Second Number: ' + ${calcEntry.operandTwo}" />
-<p th:text="'Operation: ' + ${calcEntry.operator}" />
-<p th:text="'Result: ' + ${calcEntry.result}" />
-<a href="/">Submit another message</a>
+<div class="container">
+    <div class="row">
+        <h1>Result</h1>
+    </div>
+    <div class="row">
+        <p th:text="'First Number: ' + ${calcEntry.operandOne}" />
+    </div>
+    <div class="row">
+        <p th:text="'Second Number: ' + ${calcEntry.operandTwo}" />
+    </div>
+    <div class="row">
+        <p th:text="'Operation: ' + ${calcEntry.operator}" />
+    </div>
+    <div class="row">
+        <p th:text="'Result: ' + ${calcEntry.result}" />
+    </div>
+    <div class="row">
+        <a type="button" class="btn btn-primary" href="/">Submit another message</a>
+    </div>
+</div>
 </body>
 </html>
