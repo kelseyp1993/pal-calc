@@ -8,28 +8,39 @@
 <body>
 <h1>Form</h1>
 <form action="#" th:action="@{/calc}" th:object="${calc}" method="post">
-    <p>Operand 1: <input type="text" th:field="*{operandOne}" placeholder="Operand 1"/></p>
-    <p>Operand 2: <input type="text" th:field="*{operandTwo}" /></p>
-    <!--<th:form type="select" th:field="{operator}" />-->
-        <!--<optoin value="0" label="Add(+)"></optoin>-->
-    <!--<div class="input-group">-->
-        <!--<select class="custom-select" id="inputGroupSelect04" th:field="*{operator}">-->
-            <!--<option value="0">Add</option>-->
-            <!--<option value="1">Subtract</option>-->
-            <!--<option value="2">Multiply</option>-->
-            <!--<option value="3">Divide</option>-->
-        <!--</select>-->
-        <!--<div class="input-group-append">-->
-            <!--<button class="btn btn-outline-secondary" type="button">Calculate</button>-->
-        <!--</div>-->
-    <!--</div>-->
-    <select th:field="*{operator}" >
-        <option th:value="0" th:text="Addition" >+</option>
-        <option th:value="1" th:text="Subtraction">-</option>
-        <option th:value="2" th:text="Multiplication">*</option>
-        <option th:value="3" th:text="Division">/</option>
-    </select>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <p>Operand 1: <input type="text" th:field="*{operandOne}" placeholder="Operand 1"/></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <p>Operand 2: <input type="text" th:field="*{operandTwo}" /></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group">
+                    <p>
+                        <select  class="custom-select" th:field="*{operator}" >
+                            <option th:value="0" th:text="Addition" >+</option>
+                            <option th:value="1" th:text="Subtraction">-</option>
+                            <option th:value="2" th:text="Multiplication">*</option>
+                            <option th:value="3" th:text="Division">/</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </div>
+        </div>
+    </div>
 </form>
 </body>
 </html>
